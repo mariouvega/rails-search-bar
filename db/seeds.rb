@@ -34,3 +34,25 @@ names = [
 names.each do |band|
      Artist.create(name: band)
 end
+# for our seeds.rb
+
+['Universal',
+ 'Virgin',
+ 'Atlantic',
+ 'Geffen'
+].each do |name|
+  Label.find_or_create_by name: name
+end
+
+['The Best of The Doors',
+ 'Waiting for the Sun',
+ 'Dark Side of the Moon',
+ 'Hot Fuss',
+ 'Battle Born',
+ 'Who Are You',
+ 'Live At Leeds',
+ 'No More Rain',
+ 'The X Files'
+].each do |name|
+  Album.find_or_create_by( name: name )
+end

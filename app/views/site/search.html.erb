@@ -1,0 +1,16 @@
+<h1>Jukebox</h1>
+
+<%= form_tag site_search_path do %>
+     <%= search_field_tag :term %>
+     <%= submit_tag "Search" %>
+<% end %>
+
+
+<!-- <%=  params %> -->
+<hr>
+     <% if !@results.nil? %>
+       <% @results.each do |result| %>
+       <!-- <div><%= link_to result.name, result %></div> --> <!--to create the search result into a link-->
+         <div><%= result.name %></div>
+       <% end %>
+     <% end %>
